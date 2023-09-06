@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.addnews.AddNewsFragment">
+
+    <ImageView
+        android:id="@+id/ivNewsImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_add_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/llNewsImages"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/ivNewsImage"/>
+
+    <EditText
+        android:id="@+id/etTitle"
+        app:layout_constraintTop_toBottomOf="@+id/llNewsImages"
+        android:hint="Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etContent"
+        app:layout_constraintTop_toBottomOf="@id/etTitle"
+        android:layout_width="match_parent"
+        android:minLines="5"
+        android:hint="Content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnSave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

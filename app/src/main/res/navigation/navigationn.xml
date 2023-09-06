@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigationn"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.firebasenewsexample.ui.login.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_forgotFragment"
+            app:destination="@id/forgotFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewsFragment"
+        android:name="com.example.firebasenewsexample.ui.addnews.AddNewsFragment"
+        android:label="Add News"
+        tools:layout="@layout/fragment_add_news" />
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.example.firebasenewsexample.ui.dashboard.DashBoardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dash_board" >
+        <action
+            android:id="@+id/action_dashBoardFragment_to_addNewsFragment"
+            app:destination="@id/addNewsFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_allNewsFragment"
+            app:destination="@id/allNewsFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotFragment"
+        android:name="com.example.firebasenewsexample.ui.forgot.ForgotFragment"
+        android:label="Forgot Password"
+        tools:layout="@layout/fragment_forgot" >
+        <action
+            android:id="@+id/action_forgotFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.firebasenewsexample.ui.login.register.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allNewsFragment"
+        android:name="com.example.firebasenewsexample.ui.allNews.AllNewsFragment"
+        android:label="All News"
+        tools:layout="@layout/fragment_all_news" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.example.firebasenewsexample.ui.profile.ProfileFragment"
+        android:label="My Profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

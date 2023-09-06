@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserProfileImage"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:padding="10dp"
+        android:src="@drawable/common_google_signin_btn_text_dark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvUserEmail"
+        tools:text="deneme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivUserProfileImage"
+        app:layout_constraintRight_toRightOf="@+id/iv_Arrow"
+        app:layout_constraintTop_toTopOf="@+id/ivUserProfileImage"
+        app:layout_constraintLeft_toRightOf="@+id/ivUserProfileImage"/>
+
+    <ImageView
+        android:id="@+id/iv_Arrow"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/baseline_arrow_forward_ios_24"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/ivUserProfileImage"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
